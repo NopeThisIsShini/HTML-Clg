@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e4e4e4;
+        }
+
+        .calculator {
+            max-width: 250px;
+            margin: 100px auto;
+            background-color: #897c9d;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        #display {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #2b3017;
+            text-align: right;
+            border-radius: 5px;
+        }
+
+        input[type="button"]:not( input[type="button"][value="="]){
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 18PX;
+            background-color: rgb(76, 83, 95);
+            color: rgb(61, 169, 165);
+            cursor: pointer;
+        }
+
+
+            input[type="button"][value="="] {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 188px;
+            background-color: rgb(152, 97, 129);
+            color: white;
+            cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+    <div class="calculator">
+    <form name="f1">
+            <input type="text" id="display" name="ans" >
+
+            <table style="width: 100%; border: 1px solid #1d1616;margin:2%;">
+                <tr>
+                    <td>
+                        <input type="button" value="7" onclick="f1.ans.value += '7'">
+                    </td>
+                    <td>
+                        <input type="button" value="8" onclick="f1.ans.value += '8'">
+                    </td>
+                    <td>
+                        <input type="button" value="9" onclick="f1.ans.value += '9'">
+                    </td>
+                    <td>
+                        <input type="button" value="/" onclick="f1.ans.value += '/'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="4" onclick="f1.ans.value += '4'">
+                    </td>
+                    <td>
+                        <input type="button" value="5" onclick="f1.ans.value += '5'">
+                    </td>
+                    <td>
+                        <input type="button" value="6" onclick="f1.ans.value += '6'">
+                    </td>
+                    <td>
+                        <input type="button" value=" " onclick="f1.ans.value += ''">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="1" onclick="f1.ans.value += '1'">
+                    </td>
+                    <td>
+                        <input type="button" value="2" onclick="f1.ans.value += '2'">
+                    </td>
+                    <td>
+                        <input type="button" value="3" onclick="f1.ans.value += '3'">
+                    </td>
+                    <td>
+                        <input type="button" value="-" onclick="f1.ans.value += '-'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="C" onclick="f1.ans.value = ' '">
+                    </td>
+                    <td>
+                        <input type="button" value="0" onclick="f1.ans.value += '0'">
+                    </td>
+                    <td>
+                        <input type="button" value="." onclick="f1.ans.value += '.'">
+                    </td>
+                    <td>
+                        <input type="button" value="+" onclick="f1.ans.value += '+'">
+                    </td>
+                </tr>
+            </div>
+                <tr>
+                    <td colspan="4" >
+                            <center><input type="button" value="=" onclick="f1.ans.value = eval(f1.ans.value)"></center>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

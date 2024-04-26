@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap two numbers</title>
+</head>
+<body>
+    <center>
+        <h3>Swap Two Number</h3>
+        Num1 <input type="text" class="inputf"><br>
+    Num2 <input type="text" class="inputs"><br> <br>
+    <input type="button" value="swap" onclick="func()">
+    <!-- <input type="text" class="result"> -->
+    <p class="result"></p>
+ 
+    </center>
+    <script>
+        function func(){
+            let a=parseInt(document.querySelector(".inputf").value)
+            let b=parseInt(document.querySelector(".inputs").value)
+            a=a+b,b=a-b, a=a-b
+            document.querySelector(".result").innerHTML="a= "+a+","+"b= "+b;
+            // document.querySelector(".result2").innerHTML=b
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: rgb(24, 27, 26);
+        }
+        #stime{
+        border: 1px black solid;
+        height: fit-content;
+        width: fit-content;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        font-size: 50px;
+        font-weight: bold;
+        background-color: rgb(0, 0, 0);
+        color: rgb(95, 147, 101);
+        border-radius: 12px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="time" id="stime"></div>
+    <!-- <input type="button" onclick="ShowTime()" value="Click"> -->
+    <script>
+        function ShowTime()
+        {
+            var date=new Date()
+            var h=date.getHours()
+            var m=date.getMinutes()
+            var s=date.getSeconds()
+            var session="AM"
+            h=(h<10)? "0"+h:h;
+            m=(m<10)? "0"+m:m;
+            s=(s<10)?"0"+s:s;
+            if(h>12)
+            {
+                h=h-12
+                
+               
+            }
+            if(h>=12){
+                session="PM"
+            }
+            
+
+            <!-- document.querySelector(".time").innerHTML=-->
+            document.querySelector("#stime").innerHTML=h+":"+m+":"+s+" "+session 
+            setTimeout(ShowTime,1000)
+            
+        }
+        ShowTime()
+        
+    </script>
+</body>
+</html>

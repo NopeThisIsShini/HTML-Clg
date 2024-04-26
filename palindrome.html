@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+</head>
+<body>
+    <center>
+        <input type="text" class="input">
+    <input type="button" onclick="palindrome()" value="Click">
+    <p class="output"></p>
+    </center>
+    <script>
+        function palindrome(){
+            let n=parseInt(document.querySelector(".input").value)
+            let t=n
+            let sum=0
+            while(t!=0){
+                r=t%10
+                sum=(sum*10)+r
+                t=Math.floor(t/10)
+            }
+            if(n === sum)
+            document.querySelector(".output").innerHTML=n+" is palindrome"
+            else
+            document.querySelector(".output").innerHTML=n+" is not palindrome"
+        }
+    </script>
+</body>
+</html>

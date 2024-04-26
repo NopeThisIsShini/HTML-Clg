@@ -1,0 +1,29 @@
+
+
+<html>
+
+<head>
+<title>Fibonacci Series</title>
+<script>
+    function fibo() {
+      
+        let num=document.querySelector(".input").value
+        let fib = [0, 1];
+        for (let i = 2; i < num; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        
+        // Print Fibonacci series
+        document.querySelector(".result").innerHTML = fib.join(", ");
+    }
+</script>
+</head>
+<body>
+    <h3>Fibonacci Series !!</h3>
+    <form action="">
+        <input type="number" class="input">
+        <input type="button" value="Generate" onclick="fibo()">
+    </form>
+    <p class="result"></p>
+</body>
+</html>

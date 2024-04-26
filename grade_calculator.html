@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=q, initial-scale=1.0">
+    <title>Grade Calculator  </title>
+    <style>
+        html{
+            margin: auto;
+            background-color: #ffffff;
+            color: rgb(16, 16, 16);
+        }
+        #input1,#input2,#input3,#input4,#input5{
+            border-radius: 12px;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+        }
+        #button{
+            background-color: #8583f7;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px #3c37c6 solid;
+            margin: 3px;
+        }
+        /* .tab{
+            font-size: 24px;
+            margin-left: 500px;
+            margin-top: -300px;
+        } */
+    </style>
+</head>
+<body>
+    <center>
+        SUB1:<input type="text" id="input1" placeholder="Enter Subject 1"><br><br>
+        SUB2:<input type="text" id="input2" placeholder="Enter Subject 2"> <br> <br>
+        SUB3:<input type="text" id="input3" placeholder="Enter Subject 3"> <br> <br>
+        SUB4:<input type="text" id="input4" placeholder="Enter Subject 4"><br><br>
+        SUB5:<input type="text" id="input5" placeholder="Enter Subject 5"> <br> <br>
+        
+        <button onclick="grade()" id="button">Calculate</button>
+        <table class="tab">
+            <tr>
+                <td>Total Marks:</td>
+                <td>500</td>
+            </tr>
+            <tr>
+               <td> Obtained Marks:</td>
+               <td class="om"> </td>
+            </tr>
+            <tr>
+                <td>Percentage:</td>
+                <td class="per"></td>
+            </tr>
+            <tr>
+                <td>Remarks:</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>Grade:</td>
+                <td class="gra"></td>
+            </tr>
+            
+        </table>
+    </center>
+        <!-- SUB1:<input type="text" id="input1" placeholder="Enter Subject 1"><br><br>
+    SUB2:<input type="text" id="input2" placeholder="Enter Subject 2"> <br> <br>
+    SUB3:<input type="text" id="input3" placeholder="Enter Subject 3"> <br> <br>
+    SUB4:<input type="text" id="input4" placeholder="Enter Subject 4"><br><br>
+    SUB5:<input type="text" id="input5" placeholder="Enter Subject 5"> <br> <br>
+    
+    <button onclick="grade()" id="button">Calculate</button>
+    <table class="tab">
+        <tr>
+            <td>Total Marks:</td>
+            <td>500</td>
+        </tr>
+        <tr>
+           <td> Obtained Marks:</td>
+           <td class="om"> </td>
+        </tr>
+        <tr>
+            <td>Percentage:</td>
+            <td class="per"></td>
+        </tr>
+        <tr>
+            <td>Remarks:</td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td>Grade:</td>
+            <td class="gra"></td>
+        </tr> -->
+        
+    <!-- </table> -->
+    <script>
+        function grade(){
+             var a=parseInt(document.querySelector("#input1").value)
+                var b=parseInt(document.querySelector("#input2").value)
+                var c=parseInt(document.querySelector("#input3").value)
+                var d=parseInt(document.querySelector("#input4").value)
+                var e=parseInt(document.querySelector("#input5").value) 
+        
+                if(a>100 || b>100 || c>100 || d>100 || e>100){
+                    alert("Take valid input")
+                }
+                else{
+                    var obd=a+b+c+d+e;
+                    document.querySelector(".om").innerHTML=obd
+                }
+               
+                var percen=((obd)/500)*100
+                document.querySelector(".per").innerHTML=percen.toFixed(2)+"%"
+                if(a>=28 && b>=28 && c>=28 && d>=28 && e>=28){
+                    document.querySelector(".remark").textContent="PASS"
+
+                    if(obd >=100 && obd <200 )
+                    document.querySelector(".gra").textContent="D"
+                    if(obd >=200 && obd <300 )
+                    document.querySelector(".gra").textContent="C"
+                    if(obd >=300 && obd <400 )
+                    document.querySelector(".gra").textContent="B"
+                    if(obd >=400 && obd <=500 )
+                    document.querySelector(".gra").textContent="A"
+                    
+                }
+                 else
+                document.querySelector(".remark").innerHTML="FAIL"
+
+                
+        
+                
+        
+        
+        }
+        
+
+    </script>
+
+</body>
+</html>

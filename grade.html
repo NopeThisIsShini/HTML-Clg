@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <lable name="">
+        <td>
+            <tr>
+                Bengali:<input type="number"id="Bengali" placeholder="Enter number"><br><br>
+            </tr>
+            <tr>
+                English:<input type="number"id="English" placeholder="Enter number"><br><br>
+            </tr>
+            <tr>
+                Math:<input type="number" id="Math" placeholder="Enter number"><br><br>
+             </tr>
+             <tr>
+                Physics:<input type="number" id="Physics" placeholder="Enter number"><br><br>
+             </tr>
+             <tr>
+                Chemistry:<input type="number" id="Chemistry" placeholder="Enter number"><br><br>
+             </tr>
+        </td>
+        <button onclick="calculate()">Calculate</button><br><br>
+
+        <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+    </lable>
+    <script>
+        function calculate(){
+            var a=parseInt(document.getElementById('Bengali').value)
+            var b=parseInt(document.getElementById('English').value)
+            var c=parseInt(document.getElementById('Math').value)
+            var d=parseInt(document.getElementById('Physics').value)
+            var e=parseInt(document.getElementById('Chemistry').value)
+            if(a>100 ||b>100 ||c>100||d>100||e>100){
+                document.querySelector("result").innerHTML="Enter valid number";
+                return;
+            }
+            var sum=500
+            var total=(a+b+c+d+e)
+            var avg=(a+b+c+d+e)/5
+            var grade;
+            var percentage=avg;
+            if(avg>=90){
+                grade="A"
+            }
+            else if(avg>=80){
+                grade="B"
+            }
+            else if(avg>=70){
+                grade="C"
+            }
+            else if(avg>=50){
+                grade="D"
+            }
+            else{
+                grade="E"
+            }
+            document.getElementById("result2").innerText="obtain marks:" + total
+            document.getElementById("result3").innerText="Grade:" +grade
+            document.getElementById("result4").innerText="Percentage:" +percentage+ "%"
+            document.getElementById("result").innerText="Total marks:" +sum
+
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

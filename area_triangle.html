@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area of triangle</title>
+    <style>
+        /* .total{
+            border: 2px solid black;
+            padding: 32px;
+            width: 50vw;
+            height: 50vh;
+            background-color: rgb(158, 177, 218);
+        }
+        .Base,.Height{
+            color: rgb(41, 48, 50);
+            border-radius: 18px;
+            padding: 12px;
+            background-color: rgb(124, 210, 214);
+            top: auto;
+            
+        }
+        .area{
+            border-radius: 18px;
+            padding: 12px;
+            background-color: rgb(110, 150, 181);
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="total">
+            <h1 >Area Calculator</h1>
+            <input type="text" class="Base" placeholder="Enter the base"><br> <br>
+            <input type="text" class="Height" placeholder="Enter the height"><br><br>
+            <button class="area" onclick="area()">Area</button>
+            <p class="result"></p>
+        
+        </div>
+       
+    </center>
+    
+</body>
+<script>
+    function area(){
+        let base=document.querySelector(".Base").value
+        let height=(document.querySelector(".Height")).value
+        let area=(base*height)/2
+        result=document.querySelector(".result")
+        result.innerHTML=area
+
+
+    }
+</script>
+
+</html>
